@@ -1,10 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:dysvoix/app.dart';
 import 'package:dysvoix/injection_container.dart' as di;
+import 'package:hive_flutter/hive_flutter.dart';
 
 void main() {
   setUp(() async {
+    // Initialisation minimaliste de Hive pour les tests
+    Hive.init('.');
+    await Hive.openBox('sessionBox');
     await di.init();
+  });
+
+  tearDown(() async {
+    await Hive.close();
+    await di.sl.reset();
   });
 
   testWidgets('Test de fumée : l\'application démarre et affiche le bouton Commencer', (WidgetTester tester) async {
