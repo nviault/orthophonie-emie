@@ -1,6 +1,19 @@
-# Guide d'Installation de DysVoix sur Ubuntu 24.04
+# DysVoix / L'Odyssée de l'Île d'Émie
 
-Ce guide est destiné aux débutants souhaitant configurer leur environnement de développement pour l'application **DysVoix** (Aide à l'élocution pour enfants) sur Ubuntu 24.04.
+| Champ | Valeur |
+|---|---|
+| **Nom** | DysVoix / L'Odyssée de l'Île d'Émie |
+| **Description** | Application thérapeutique Flutter Android d'aide à l'élocution pour enfants atteints de dyspraxie verbale |
+| **Cible** | Android — Pixel 8 Pro, Xiaomi Redmi Pad Pro — `minSdk 24` |
+| **Architecture** | BLoC + GetIt, stockage local Hive chiffré AES-256 |
+| **Contrainte médicale clé** | Sessions limitées à **10 minutes maximum** |
+| **Statut** | MVP en développement actif |
+
+---
+
+# Guide d'Installation sur Ubuntu 24.04
+
+Ce guide est destiné aux débutants souhaitant configurer leur environnement de développement pour l'application **orthophonie_emie** (DysVoix) sur Ubuntu 24.04.
 
 ---
 
@@ -92,12 +105,12 @@ Si vous voyez des coches vertes partout (ignorez la partie "Chrome" ou "Linux De
 
 ---
 
-## 7. Lancement du projet DysVoix
+## 7. Lancement du projet orthophonie_emie
 
 Maintenant, préparez et lancez l'application :
 
 1. **Ouvrir le projet :**
-   Ouvrez VS Code, faites `File > Open Folder...` et sélectionnez le dossier du projet `dysvoix`.
+   Ouvrez VS Code, faites `File > Open Folder...` et sélectionnez le dossier du projet `orthophonie_emie`.
 
 2. **Récupérer les dépendances :**
    Ouvrez le terminal intégré dans VS Code (`Ctrl+ù` ou `Terminal > New Terminal`) et tapez :

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../domain/entities/volume_state.dart';
+import '../../../audio/domain/entities/volume_state.dart';
 
 /// Widget interactif représentant un "monstre" qui réagit au volume.
 /// UX enfant : sans texte, juste visuel.
