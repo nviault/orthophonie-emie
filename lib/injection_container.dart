@@ -1,5 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
+import 'core/audio/audio_manager.dart';
+import 'features/audio/domain/usecases/record_production_use_case.dart';
 import 'features/home/presentation/bloc/home_bloc.dart';
 import 'features/session/data/datasources/session_local_data_source.dart';
 import 'features/session/data/repositories/session_repository_impl.dart';
@@ -21,6 +23,12 @@ final sl = GetIt.instance;
 /// Initialise les dépendances du projet
 /// Gère les Blocs, UseCases, Repositories et DataSources.
 Future<void> init() async {
+  // --- Core ---
+  sl.registerLazySingleton(() => AudioManager());
+
+  // --- Features - Audio ---
+  sl.registerLazySingleton(() => RecordProductionUseCase(sl()));
+
   // --- Features - Session ---
   // BLoC
   sl.registerFactory(() => SessionBloc(
