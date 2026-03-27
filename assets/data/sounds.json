@@ -1,0 +1,44 @@
+{
+  "sounds": [
+    {
+      "id": "a",
+      "words": [
+        {
+          "id": "ane",
+          "image": "assets/images/ane.png",
+          "audio": "assets/audio/ane.mp3",
+          "schema": "â-ne"
+        },
+        {
+          "id": "avion",
+          "image": "assets/images/avion.png",
+          "audio": "assets/audio/avion.mp3",
+          "schema": "a-vion"
+        },
+        {
+          "id": "abeille",
+          "image": "assets/images/abeille.png",
+          "audio": "assets/audio/abeille.mp3",
+          "schema": "a-beille"
+        }
+      ]
+    },
+    {
+      "id": "o",
+      "words": [
+        {
+          "id": "ours",
+          "image": "assets/images/ours.png",
+          "audio": "assets/audio/ours.mp3",
+          "schema": "ours"
+        },
+        {
+          "id": "orange",
+          "image": "assets/images/orange.png",
+          "audio": "assets/audio/orange.mp3",
+          "schema": "o-range"
+        }
+      ]
+    }
+  ]
+}

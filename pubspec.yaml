@@ -24,3 +24,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  # Assets section for local JSON, images, and audio
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/audio/
