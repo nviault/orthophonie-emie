@@ -9,7 +9,9 @@ import '../../../audio/domain/entities/volume_state.dart';
 import '../../../audio/domain/usecases/evaluate_volume_use_case.dart';
 import '../../../audio/domain/usecases/record_production_use_case.dart';
 import '../bloc/sound_detail_bloc.dart';
+import '../bloc/audio_controller.dart';
 import '../widgets/volume_monster_widget.dart';
+import '../widgets/word_card.dart';
 
 /// Page affichant les mots associés à un son spécifique.
 class SoundDetailPage extends StatefulWidget {
@@ -26,10 +28,18 @@ class _SoundDetailPageState extends State<SoundDetailPage> {
   VolumeState _volumeState = VolumeState.small;
   StreamSubscription<Amplitude>? _amplitudeSub;
   final _evaluateVolumeUseCase = EvaluateVolumeUseCase();
+  late AudioController _audioController;
+
+  @override
+  void initState() {
+    super.initState();
+    _audioController = sl<AudioController>();
+  }
 
   @override
   void dispose() {
     _amplitudeSub?.cancel();
+    _audioController.dispose();
     super.dispose();
   }
 
@@ -65,6 +75,7 @@ class _SoundDetailPageState extends State<SoundDetailPage> {
           soundId: widget.soundId,
           isRecording: _isRecording,
           volumeState: _volumeState,
+          audioController: _audioController,
           onRecordingChanged: (value) {
             setState(() {
               _isRecording = value;
@@ -85,6 +96,7 @@ class SoundDetailView extends StatelessWidget {
   final String soundId;
   final bool isRecording;
   final VolumeState volumeState;
+  final AudioController audioController;
   final Function(bool) onRecordingChanged;
 
   const SoundDetailView({
@@ -92,6 +104,7 @@ class SoundDetailView extends StatelessWidget {
     required this.soundId,
     required this.isRecording,
     required this.volumeState,
+    required this.audioController,
     required this.onRecordingChanged,
   });
 
@@ -110,10 +123,9 @@ class SoundDetailView extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
 
-              // Affichage du monstre de volume uniquement lors de l'enregistrement
               if (isRecording)
                 Container(
-                  height: 200,
+                  height: 180,
                   alignment: Alignment.center,
                   child: VolumeMonsterWidget(state: volumeState),
                 )
@@ -131,57 +143,54 @@ class SoundDetailView extends StatelessWidget {
                 ),
 
               Expanded(
-                child: ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: GridView.builder(
+                  padding: const EdgeInsets.all(20),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20,
+                    childAspectRatio: 0.8,
+                  ),
                   itemCount: state.words.length,
                   itemBuilder: (context, index) {
                     final word = state.words[index];
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 15),
-                      child: ListTile(
-                        contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 10,
+                    return Stack(
+                      children: [
+                        WordCard(
+                          label: word.id,
+                          imagePath: word.image,
+                          audioPath: word.audio,
+                          controller: audioController,
                         ),
-                        leading: const Icon(
-                          Icons.image,
-                          size: 40,
-                          color: AppTheme.leafGreen,
-                        ),
-                        title: Text(
-                          word.id.toUpperCase(),
-                          style: const TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: AppTheme.woodBrown,
+                        // Bouton d'enregistrement par-dessus ou à côté
+                        Positioned(
+                          right: 0,
+                          bottom: 30,
+                          child: ElevatedButton(
+                            onPressed: isRecording ? null : () async {
+                              final recordUseCase = sl<RecordProductionUseCase>();
+                              await recordUseCase(
+                                onStart: () => onRecordingChanged(true),
+                                onStop: () {
+                                  onRecordingChanged(false);
+                                  // Petit feedback visuel de succès ?
+                                },
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: isRecording ? Colors.red : AppTheme.buttonOrange,
+                              padding: const EdgeInsets.all(8),
+                              shape: const CircleBorder(),
+                              elevation: 2,
+                            ),
+                            child: Icon(
+                              isRecording ? Icons.mic : Icons.mic_none,
+                              color: Colors.white,
+                              size: 20,
+                            ),
                           ),
                         ),
-                        subtitle: Text(
-                          word.schema,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        trailing: ElevatedButton(
-                          onPressed: isRecording ? null : () async {
-                            final recordUseCase = sl<RecordProductionUseCase>();
-                            await recordUseCase(
-                              onStart: () => onRecordingChanged(true),
-                              onStop: () => onRecordingChanged(false),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: isRecording ? Colors.red : AppTheme.buttonOrange,
-                            padding: const EdgeInsets.all(10),
-                            shape: const CircleBorder(),
-                          ),
-                          child: Icon(
-                            isRecording ? Icons.mic : Icons.mic_none,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
+                      ],
                     );
                   },
                 ),

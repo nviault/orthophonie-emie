@@ -1,6 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
+import 'package:just_audio/just_audio.dart';
 import 'core/audio/audio_manager.dart';
 import 'features/audio/domain/usecases/record_production_use_case.dart';
 import 'features/home/presentation/bloc/home_bloc.dart';
@@ -12,11 +13,15 @@ import 'features/session/domain/usecases/start_session_use_case.dart';
 import 'features/session/presentation/bloc/session_bloc.dart';
 import 'features/sounds/data/datasources/sound_local_data_source.dart';
 import 'features/sounds/data/repositories/sound_repository_impl.dart';
+import 'features/sounds/data/repositories/audio_repository_impl.dart';
 import 'features/sounds/domain/repositories/sound_repository.dart';
+import 'features/sounds/domain/repositories/audio_repository.dart';
 import 'features/sounds/domain/usecases/get_sounds_use_case.dart';
 import 'features/sounds/domain/usecases/get_words_for_sound_use_case.dart';
+import 'features/sounds/domain/usecases/play_word_audio_use_case.dart';
 import 'features/sounds/presentation/bloc/sounds_bloc.dart';
 import 'features/sounds/presentation/bloc/sound_detail_bloc.dart';
+import 'features/sounds/presentation/bloc/audio_controller.dart';
 import 'features/settings/data/datasources/settings_local_data_source.dart';
 import 'features/settings/data/repositories/settings_repository_impl.dart';
 import 'features/settings/domain/repositories/settings_repository.dart';
@@ -32,6 +37,7 @@ final sl = GetIt.instance;
 Future<void> init() async {
   // --- Core ---
   sl.registerLazySingleton(() => AudioManager());
+  sl.registerLazySingleton(() => AudioPlayer());
 
   // --- Features - Audio ---
   sl.registerLazySingleton(() => RecordProductionUseCase(sl()));
@@ -84,17 +90,22 @@ Future<void> init() async {
   );
 
   // --- Features - Sounds ---
-  // BLoCs
+  // BLoCs / Controllers
   sl.registerFactory(() => SoundsBloc(getSoundsUseCase: sl()));
   sl.registerFactory(() => SoundDetailBloc(getWordsForSoundUseCase: sl()));
+  sl.registerFactory(() => AudioController(sl()));
 
   // Use cases
   sl.registerLazySingleton(() => GetSoundsUseCase(sl()));
   sl.registerLazySingleton(() => GetWordsForSoundUseCase(sl()));
+  sl.registerLazySingleton(() => PlayWordAudio(sl()));
 
   // Repositories
   sl.registerLazySingleton<SoundRepository>(
     () => SoundRepositoryImpl(localDataSource: sl()),
+  );
+  sl.registerLazySingleton<AudioRepository>(
+    () => AudioRepositoryImpl(sl()),
   );
 
   // Data sources
