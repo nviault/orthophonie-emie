@@ -1,0 +1,187 @@
+{
+  "sounds": [
+
+    {
+      "id": "a",
+      "words": [
+        {"id": "ane", "image": "assets/images/words/ane.jpg", "audio": "assets/audio/model/son_a/ane.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "arbre", "image": "assets/images/words/arbre.jpg", "audio": "assets/audio/model/son_a/arbre.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "avion", "image": "assets/images/words/avion.jpg", "audio": "assets/audio/model/son_a/avion.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "abeille", "image": "assets/images/words/abeille.jpg", "audio": "assets/audio/model/son_a/abeille.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "arc", "image": "assets/images/words/arc.jpg", "audio": "assets/audio/model/son_a/arc.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "ananas", "image": "assets/images/words/ananas.jpg", "audio": "assets/audio/model/son_a/ananas.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "ami", "image": "assets/images/words/ami.jpg", "audio": "assets/audio/model/son_a/ami.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "animal", "image": "assets/images/words/animal.jpg", "audio": "assets/audio/model/son_a/animal.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "armoire", "image": "assets/images/words/armoire.jpg", "audio": "assets/audio/model/son_a/armoire.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "allumette", "image": "assets/images/words/allumette.jpg", "audio": "assets/audio/model/son_a/allumette.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "attache", "image": "assets/images/words/attache.jpg", "audio": "assets/audio/model/son_a/attache.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "avocat", "image": "assets/images/words/avocat.jpg", "audio": "assets/audio/model/son_a/avocat.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "agenda", "image": "assets/images/words/agenda.jpg", "audio": "assets/audio/model/son_a/agenda.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "ampoule", "image": "assets/images/words/ampoule.jpg", "audio": "assets/audio/model/son_a/ampoule.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "araignee", "image": "assets/images/words/araignee.jpg", "audio": "assets/audio/model/son_a/araignee.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "aigle", "image": "assets/images/words/aigle.jpg", "audio": "assets/audio/model/son_a/aigle.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "assiette", "image": "assets/images/words/assiette.jpg", "audio": "assets/audio/model/son_a/assiette.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "arene", "image": "assets/images/words/arene.jpg", "audio": "assets/audio/model/son_a/arene.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "alphabet", "image": "assets/images/words/alphabet.jpg", "audio": "assets/audio/model/son_a/alphabet.mp3", "schema": "assets/svg/articulation/schema_a.svg"},
+        {"id": "abricot", "image": "assets/images/words/abricot.jpg", "audio": "assets/audio/model/son_a/abricot.mp3", "schema": "assets/svg/articulation/schema_a.svg"}
+      ]
+    },
+
+    {
+      "id": "e",
+      "words": [
+        {"id": "elephant", "image": "assets/images/words/elephant.jpg", "audio": "assets/audio/model/son_e/elephant.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "ecole", "image": "assets/images/words/ecole.jpg", "audio": "assets/audio/model/son_e/ecole.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "etoile", "image": "assets/images/words/etoile.jpg", "audio": "assets/audio/model/son_e/etoile.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "epee", "image": "assets/images/words/epee.jpg", "audio": "assets/audio/model/son_e/epee.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "ecureuil", "image": "assets/images/words/ecureuil.jpg", "audio": "assets/audio/model/son_e/ecureuil.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "enfant", "image": "assets/images/words/enfant.jpg", "audio": "assets/audio/model/son_e/enfant.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "enveloppe", "image": "assets/images/words/enveloppe.jpg", "audio": "assets/audio/model/son_e/enveloppe.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "escargot", "image": "assets/images/words/escargot.jpg", "audio": "assets/audio/model/son_e/escargot.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "epingle", "image": "assets/images/words/epingle.jpg", "audio": "assets/audio/model/son_e/epingle.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "erable", "image": "assets/images/words/erable.jpg", "audio": "assets/audio/model/son_e/erable.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "epicerie", "image": "assets/images/words/epicerie.jpg", "audio": "assets/audio/model/son_e/epicerie.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "etang", "image": "assets/images/words/etang.jpg", "audio": "assets/audio/model/son_e/etang.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "echarpe", "image": "assets/images/words/echarpe.jpg", "audio": "assets/audio/model/son_e/echarpe.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "echelle", "image": "assets/images/words/echelle.jpg", "audio": "assets/audio/model/son_e/echelle.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "egout", "image": "assets/images/words/egout.jpg", "audio": "assets/audio/model/son_e/egout.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "epinard", "image": "assets/images/words/epinard.jpg", "audio": "assets/audio/model/son_e/epinard.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "escabeau", "image": "assets/images/words/escabeau.jpg", "audio": "assets/audio/model/son_e/escabeau.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "etui", "image": "assets/images/words/etui.jpg", "audio": "assets/audio/model/son_e/etui.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "epouvantail", "image": "assets/images/words/epouvantail.jpg", "audio": "assets/audio/model/son_e/epouvantail.mp3", "schema": "assets/svg/articulation/schema_e.svg"},
+        {"id": "engrenage", "image": "assets/images/words/engrenage.jpg", "audio": "assets/audio/model/son_e/engrenage.mp3", "schema": "assets/svg/articulation/schema_e.svg"}
+      ]
+    },
+
+    {
+      "id": "i",
+      "words": [
+        {"id": "igloo", "image": "assets/images/words/igloo.jpg", "audio": "assets/audio/model/son_i/igloo.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "ile", "image": "assets/images/words/ile.jpg", "audio": "assets/audio/model/son_i/ile.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "image", "image": "assets/images/words/image.jpg", "audio": "assets/audio/model/son_i/image.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "insecte", "image": "assets/images/words/insecte.jpg", "audio": "assets/audio/model/son_i/insecte.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "idee", "image": "assets/images/words/idee.jpg", "audio": "assets/audio/model/son_i/idee.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "iris", "image": "assets/images/words/iris.jpg", "audio": "assets/audio/model/son_i/iris.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "iguane", "image": "assets/images/words/iguane.jpg", "audio": "assets/audio/model/son_i/iguane.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "imprimante", "image": "assets/images/words/imprimante.jpg", "audio": "assets/audio/model/son_i/imprimante.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "invite", "image": "assets/images/words/invite.jpg", "audio": "assets/audio/model/son_i/invite.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "incendie", "image": "assets/images/words/incendie.jpg", "audio": "assets/audio/model/son_i/incendie.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "instrument", "image": "assets/images/words/instrument.jpg", "audio": "assets/audio/model/son_i/instrument.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "icone", "image": "assets/images/words/icone.jpg", "audio": "assets/audio/model/son_i/icone.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "illusion", "image": "assets/images/words/illusion.jpg", "audio": "assets/audio/model/son_i/illusion.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "infusion", "image": "assets/images/words/infusion.jpg", "audio": "assets/audio/model/son_i/infusion.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "indice", "image": "assets/images/words/indice.jpg", "audio": "assets/audio/model/son_i/indice.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "invincible", "image": "assets/images/words/invincible.jpg", "audio": "assets/audio/model/son_i/invincible.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "ironie", "image": "assets/images/words/ironie.jpg", "audio": "assets/audio/model/son_i/ironie.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "illusionniste", "image": "assets/images/words/illusionniste.jpg", "audio": "assets/audio/model/son_i/illusionniste.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "intestin", "image": "assets/images/words/intestin.jpg", "audio": "assets/audio/model/son_i/intestin.mp3", "schema": "assets/svg/articulation/schema_i.svg"},
+        {"id": "intelligent", "image": "assets/images/words/intelligent.jpg", "audio": "assets/audio/model/son_i/intelligent.mp3", "schema": "assets/svg/articulation/schema_i.svg"}
+      ]
+    },
+
+    {
+      "id": "o",
+      "words": [
+        {"id": "orange", "image": "assets/images/words/orange.jpg", "audio": "assets/audio/model/son_o/orange.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "ours", "image": "assets/images/words/ours.jpg", "audio": "assets/audio/model/son_o/ours.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "oiseau", "image": "assets/images/words/oiseau.jpg", "audio": "assets/audio/model/son_o/oiseau.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "outil", "image": "assets/images/words/outil.jpg", "audio": "assets/audio/model/son_o/outil.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "orage", "image": "assets/images/words/orage.jpg", "audio": "assets/audio/model/son_o/orage.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "ombre", "image": "assets/images/words/ombre.jpg", "audio": "assets/audio/model/son_o/ombre.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "olive", "image": "assets/images/words/olive.jpg", "audio": "assets/audio/model/son_o/olive.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "ocean", "image": "assets/images/words/ocean.jpg", "audio": "assets/audio/model/son_o/ocean.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "objet", "image": "assets/images/words/objet.jpg", "audio": "assets/audio/model/son_o/objet.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "opera", "image": "assets/images/words/opera.jpg", "audio": "assets/audio/model/son_o/opera.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "ordinateur", "image": "assets/images/words/ordinateur.jpg", "audio": "assets/audio/model/son_o/ordinateur.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "orageux", "image": "assets/images/words/orageux.jpg", "audio": "assets/audio/model/son_o/orageux.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "oreille", "image": "assets/images/words/oreille.jpg", "audio": "assets/audio/model/son_o/oreille.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "obus", "image": "assets/images/words/obus.jpg", "audio": "assets/audio/model/son_o/obus.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "octobre", "image": "assets/images/words/octobre.jpg", "audio": "assets/audio/model/son_o/octobre.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "or", "image": "assets/images/words/or.jpg", "audio": "assets/audio/model/son_o/or.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "orignal", "image": "assets/images/words/orignal.jpg", "audio": "assets/audio/model/son_o/orignal.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "ogre", "image": "assets/images/words/ogre.jpg", "audio": "assets/audio/model/son_o/ogre.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "oliveur", "image": "assets/images/words/oliveur.jpg", "audio": "assets/audio/model/son_o/oliveur.mp3", "schema": "assets/svg/articulation/schema_o.svg"},
+        {"id": "orchestre", "image": "assets/images/words/orchestre.jpg", "audio": "assets/audio/model/son_o/orchestre.mp3", "schema": "assets/svg/articulation/schema_o.svg"}
+      ]
+    },
+
+    {
+      "id": "u",
+      "words": [
+        {"id": "usine", "image": "assets/images/words/usine.jpg", "audio": "assets/audio/model/son_u/usine.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "urne", "image": "assets/images/words/urne.jpg", "audio": "assets/audio/model/son_u/urne.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "uniforme", "image": "assets/images/words/uniforme.jpg", "audio": "assets/audio/model/son_u/uniforme.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "utile", "image": "assets/images/words/utile.jpg", "audio": "assets/audio/model/son_u/utile.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "ustensile", "image": "assets/images/words/ustensile.jpg", "audio": "assets/audio/model/son_u/ustensile.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "univers", "image": "assets/images/words/univers.jpg", "audio": "assets/audio/model/son_u/univers.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "ulysse", "image": "assets/images/words/ulysse.jpg", "audio": "assets/audio/model/son_u/ulysse.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "union", "image": "assets/images/words/union.jpg", "audio": "assets/audio/model/son_u/union.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "usager", "image": "assets/images/words/usager.jpg", "audio": "assets/audio/model/son_u/usager.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "utilement", "image": "assets/images/words/utilement.jpg", "audio": "assets/audio/model/son_u/utilement.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "urgence", "image": "assets/images/words/urgence.jpg", "audio": "assets/audio/model/son_u/urgence.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "unique", "image": "assets/images/words/unique.jpg", "audio": "assets/audio/model/son_u/unique.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "ultra", "image": "assets/images/words/ultra.jpg", "audio": "assets/audio/model/son_u/ultra.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "urneau", "image": "assets/images/words/urneau.jpg", "audio": "assets/audio/model/son_u/urneau.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "urbanisme", "image": "assets/images/words/urbanisme.jpg", "audio": "assets/audio/model/son_u/urbanisme.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "ustion", "image": "assets/images/words/ustion.jpg", "audio": "assets/audio/model/son_u/ustion.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "utilisateur", "image": "assets/images/words/utilisateur.jpg", "audio": "assets/audio/model/son_u/utilisateur.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "utilete", "image": "assets/images/words/utilete.jpg", "audio": "assets/audio/model/son_u/utilete.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "ulcere", "image": "assets/images/words/ulcere.jpg", "audio": "assets/audio/model/son_u/ulcere.mp3", "schema": "assets/svg/articulation/schema_u.svg"},
+        {"id": "ultime", "image": "assets/images/words/ultime.jpg", "audio": "assets/audio/model/son_u/ultime.mp3", "schema": "assets/svg/articulation/schema_u.svg"}
+      ]
+    },
+
+    {
+      "id": "k",
+      "words": [
+        {"id": "kiwi", "image": "assets/images/words/kiwi.jpg", "audio": "assets/audio/model/son_k/kiwi.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "koala", "image": "assets/images/words/koala.jpg", "audio": "assets/audio/model/son_k/koala.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kilo", "image": "assets/images/words/kilo.jpg", "audio": "assets/audio/model/son_k/kilo.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kayak", "image": "assets/images/words/kayak.jpg", "audio": "assets/audio/model/son_k/kayak.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "karate", "image": "assets/images/words/karate.jpg", "audio": "assets/audio/model/son_k/karate.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kermesse", "image": "assets/images/words/kermesse.jpg", "audio": "assets/audio/model/son_k/kermesse.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "ketchup", "image": "assets/images/words/ketchup.jpg", "audio": "assets/audio/model/son_k/ketchup.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kiosque", "image": "assets/images/words/kiosque.jpg", "audio": "assets/audio/model/son_k/kiosque.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kimono", "image": "assets/images/words/kimono.jpg", "audio": "assets/audio/model/son_k/kimono.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "klaxon", "image": "assets/images/words/klaxon.jpg", "audio": "assets/audio/model/son_k/klaxon.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "karaoke", "image": "assets/images/words/karaoke.jpg", "audio": "assets/audio/model/son_k/karaoke.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kart", "image": "assets/images/words/kart.jpg", "audio": "assets/audio/model/son_k/kart.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kebab", "image": "assets/images/words/kebab.jpg", "audio": "assets/audio/model/son_k/kebab.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kir", "image": "assets/images/words/kir.jpg", "audio": "assets/audio/model/son_k/kir.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kilt", "image": "assets/images/words/kilt.jpg", "audio": "assets/audio/model/son_k/kilt.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kaki", "image": "assets/images/words/kaki.jpg", "audio": "assets/audio/model/son_k/kaki.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "krypton", "image": "assets/images/words/krypton.jpg", "audio": "assets/audio/model/son_k/krypton.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kiosquier", "image": "assets/images/words/kiosquier.jpg", "audio": "assets/audio/model/son_k/kiosquier.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "kermite", "image": "assets/images/words/kermite.jpg", "audio": "assets/audio/model/son_k/kermite.mp3", "schema": "assets/svg/articulation/schema_k.svg"},
+        {"id": "korrigan", "image": "assets/images/words/korrigan.jpg", "audio": "assets/audio/model/son_k/korrigan.mp3", "schema": "assets/svg/articulation/schema_k.svg"}
+      ]
+    },
+
+    {
+      "id": "g",
+      "words": [
+        {"id": "gateau", "image": "assets/images/words/gateau.jpg", "audio": "assets/audio/model/son_g/gateau.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "guitare", "image": "assets/images/words/guitare.jpg", "audio": "assets/audio/model/son_g/guitare.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "gorille", "image": "assets/images/words/gorille.jpg", "audio": "assets/audio/model/son_g/gorille.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "gomme", "image": "assets/images/words/gomme.jpg", "audio": "assets/audio/model/son_g/gomme.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "garage", "image": "assets/images/words/garage.jpg", "audio": "assets/audio/model/son_g/garage.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "grenouille", "image": "assets/images/words/grenouille.jpg", "audio": "assets/audio/model/son_g/grenouille.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "gazon", "image": "assets/images/words/gazon.jpg", "audio": "assets/audio/model/son_g/gazon.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "guitaree", "image": "assets/images/words/guitaree.jpg", "audio": "assets/audio/model/son_g/guitaree.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "goutte", "image": "assets/images/words/goutte.jpg", "audio": "assets/audio/model/son_g/goutte.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "galet", "image": "assets/images/words/galet.jpg", "audio": "assets/audio/model/son_g/galet.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "giraffe", "image": "assets/images/words/giraffe.jpg", "audio": "assets/audio/model/son_g/giraffe.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "glace", "image": "assets/images/words/glace.jpg", "audio": "assets/audio/model/son_g/glace.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "grue", "image": "assets/images/words/grue.jpg", "audio": "assets/audio/model/son_g/grue.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "grotte", "image": "assets/images/words/grotte.jpg", "audio": "assets/audio/model/son_g/grotte.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "genou", "image": "assets/images/words/genou.jpg", "audio": "assets/audio/model/son_g/genou.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "gaufre", "image": "assets/images/words/gaufre.jpg", "audio": "assets/audio/model/son_g/gaufre.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "gobelin", "image": "assets/images/words/gobelin.jpg", "audio": "assets/audio/model/son_g/gobelin.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "gland", "image": "assets/images/words/gland.jpg", "audio": "assets/audio/model/son_g/gland.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "groupe", "image": "assets/images/words/groupe.jpg", "audio": "assets/audio/model/son_g/groupe.mp3", "schema": "assets/svg/articulation/schema_g.svg"},
+        {"id": "guide", "image": "assets/images/words/guide.jpg", "audio": "assets/audio/model/son_g/guide.mp3", "schema": "assets/svg/articulation/schema_g.svg"}
+      ]
+    }
+
+  ]
+}
