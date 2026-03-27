@@ -1,3 +1,4 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
 import 'core/audio/audio_manager.dart';
@@ -16,6 +17,12 @@ import 'features/sounds/domain/usecases/get_sounds_use_case.dart';
 import 'features/sounds/domain/usecases/get_words_for_sound_use_case.dart';
 import 'features/sounds/presentation/bloc/sounds_bloc.dart';
 import 'features/sounds/presentation/bloc/sound_detail_bloc.dart';
+import 'features/settings/data/datasources/settings_local_data_source.dart';
+import 'features/settings/data/repositories/settings_repository_impl.dart';
+import 'features/settings/domain/repositories/settings_repository.dart';
+import 'features/settings/domain/usecases/pin_use_cases.dart';
+import 'features/settings/domain/usecases/update_settings_use_case.dart';
+import 'features/settings/presentation/bloc/settings_bloc.dart';
 
 // Service Locator global pour l'injection de dépendances
 final sl = GetIt.instance;
@@ -28,6 +35,32 @@ Future<void> init() async {
 
   // --- Features - Audio ---
   sl.registerLazySingleton(() => RecordProductionUseCase(sl()));
+
+  // --- Features - Settings ---
+  // BLoC
+  sl.registerFactory(() => SettingsBloc(
+    checkPinUseCase: sl(),
+    updateSettingsUseCase: sl(),
+    repository: sl(),
+  ));
+
+  // Use cases
+  sl.registerLazySingleton(() => CheckPinUseCase(sl()));
+  sl.registerLazySingleton(() => SavePinUseCase(sl()));
+  sl.registerLazySingleton(() => UpdateSettingsUseCase(sl()));
+
+  // Repository
+  sl.registerLazySingleton<SettingsRepository>(
+    () => SettingsRepositoryImpl(localDataSource: sl()),
+  );
+
+  // Data sources
+  sl.registerLazySingleton<SettingsLocalDataSource>(
+    () => SettingsLocalDataSourceImpl(
+      secureStorage: const FlutterSecureStorage(),
+      settingsBox: Hive.box('settingsBox'),
+    ),
+  );
 
   // --- Features - Session ---
   // BLoC

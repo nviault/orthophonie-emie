@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../injection_container.dart';
 import '../../../session/presentation/bloc/session_bloc.dart';
+import '../../../settings/presentation/pages/pin_entry_page.dart';
 import '../bloc/home_bloc.dart';
 
 /// Page d'accueil du projet DysVoix.
@@ -12,11 +13,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // On fournit les deux Blocs (Home et Session) à l'accueil
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => sl<HomeBloc>()),
-        // Charge l'état de la session dès la création
         BlocProvider(create: (context) => sl<SessionBloc>()..add(LoadSessionStatus())),
       ],
       child: const HomeView(),
@@ -34,11 +33,23 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('DysVoix'),
+        actions: [
+          // Bouton discret pour l'accès parent
+          IconButton(
+            icon: const Icon(Icons.settings, color: Colors.white70, size: 20),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PinEntryPage()),
+              );
+            },
+            tooltip: 'Espace Parent',
+          ),
+        ],
       ),
       body: BlocListener<HomeBloc, HomeState>(
         listener: (context, state) {
           if (state is HomeStarted) {
-            // Navigation vers le menu uniquement si l'état home est started
             Navigator.pushReplacementNamed(context, '/menu');
           }
         },
@@ -74,7 +85,6 @@ class HomeView extends StatelessWidget {
               ),
               const SizedBox(height: 50),
 
-              // Affichage du bouton "Commencer" basé sur l'état de la session
               BlocBuilder<SessionBloc, SessionState>(
                 builder: (context, sessionState) {
                   if (sessionState is SessionLocked) {
@@ -82,22 +92,20 @@ class HomeView extends StatelessWidget {
                     final hours = duration.inHours;
                     final minutes = duration.inMinutes % 60;
 
-                    // Formatage du texte pour l'enfant
                     final timeText = hours > 0
                         ? 'Reviens dans ${hours}h ${minutes}min'
                         : 'Reviens dans ${minutes}min';
 
                     return ElevatedButton(
-                      onPressed: null, // Désactivé si verrouillé
+                      onPressed: null,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.grey, // Couleur grise pour le verrou
+                        backgroundColor: Colors.grey,
                         side: const BorderSide(color: Colors.grey),
                       ),
                       child: Text(timeText),
                     );
                   }
 
-                  // Si session disponible ou active
                   return BlocBuilder<HomeBloc, HomeState>(
                     builder: (context, homeState) {
                       if (homeState is HomeLoading) {
@@ -106,9 +114,7 @@ class HomeView extends StatelessWidget {
 
                       return ElevatedButton(
                         onPressed: () {
-                          // 1. Démarre la session métier
                           context.read<SessionBloc>().add(StartSession());
-                          // 2. Démarre l'action d'interface
                           context.read<HomeBloc>().add(StartJourney());
                         },
                         child: const Text('Commencer'),

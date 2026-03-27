@@ -11,8 +11,9 @@ void main() async {
 
   // Initialisation de Hive (stockage local pour la session)
   await Hive.initFlutter();
-  // Ouverture d'une boite Hive pour stocker les informations de session
+  // Ouverture des boites Hive
   await Hive.openBox('sessionBox');
+  await Hive.openBox('settingsBox');
 
   // Initialisation de GetIt (service locator)
   await di.init();
