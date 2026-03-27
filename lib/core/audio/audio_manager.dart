@@ -18,6 +18,12 @@ class AudioManager {
 
   bool _isRecording = false;
 
+  /// Expose le flux d'amplitude en temps réel de l'enregistrement.
+  /// L'intervalle par défaut est 80ms pour une réactivité fluide.
+  Stream<Amplitude> onAmplitudeChanged([Duration interval = const Duration(milliseconds: 80)]) {
+    return _recorder.onAmplitudeChanged(interval);
+  }
+
   /// Démarre l'enregistrement audio.
   /// S'arrête automatiquement après 4s ou 1s de silence.
   Future<void> startRecording({required Function(String path) onComplete}) async {

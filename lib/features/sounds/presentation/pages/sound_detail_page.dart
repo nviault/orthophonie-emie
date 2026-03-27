@@ -1,9 +1,15 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:record/record.dart';
+import '../../../../core/audio/audio_manager.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../injection_container.dart';
+import '../../../audio/domain/entities/volume_state.dart';
+import '../../../audio/domain/usecases/evaluate_volume_use_case.dart';
 import '../../../audio/domain/usecases/record_production_use_case.dart';
 import '../bloc/sound_detail_bloc.dart';
+import '../widgets/volume_monster_widget.dart';
 
 /// Page affichant les mots associés à un son spécifique.
 class SoundDetailPage extends StatefulWidget {
@@ -17,6 +23,35 @@ class SoundDetailPage extends StatefulWidget {
 
 class _SoundDetailPageState extends State<SoundDetailPage> {
   bool _isRecording = false;
+  VolumeState _volumeState = VolumeState.small;
+  StreamSubscription<Amplitude>? _amplitudeSub;
+  final _evaluateVolumeUseCase = EvaluateVolumeUseCase();
+
+  @override
+  void dispose() {
+    _amplitudeSub?.cancel();
+    super.dispose();
+  }
+
+  void _startListeningToAmplitude() {
+    _amplitudeSub = sl<AudioManager>().onAmplitudeChanged(const Duration(milliseconds: 80)).listen((amp) {
+      if (mounted) {
+        setState(() {
+          _volumeState = _evaluateVolumeUseCase(amp.current);
+        });
+      }
+    });
+  }
+
+  void _stopListeningToAmplitude() {
+    _amplitudeSub?.cancel();
+    _amplitudeSub = null;
+    if (mounted) {
+      setState(() {
+        _volumeState = VolumeState.small;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +64,15 @@ class _SoundDetailPageState extends State<SoundDetailPage> {
         body: SoundDetailView(
           soundId: widget.soundId,
           isRecording: _isRecording,
+          volumeState: _volumeState,
           onRecordingChanged: (value) {
             setState(() {
               _isRecording = value;
+              if (_isRecording) {
+                _startListeningToAmplitude();
+              } else {
+                _stopListeningToAmplitude();
+              }
             });
           },
         ),
@@ -43,12 +84,14 @@ class _SoundDetailPageState extends State<SoundDetailPage> {
 class SoundDetailView extends StatelessWidget {
   final String soundId;
   final bool isRecording;
+  final VolumeState volumeState;
   final Function(bool) onRecordingChanged;
 
   const SoundDetailView({
     super.key,
     required this.soundId,
     required this.isRecording,
+    required this.volumeState,
     required this.onRecordingChanged,
   });
 
@@ -66,15 +109,26 @@ class SoundDetailView extends StatelessWidget {
           return Column(
             children: [
               const SizedBox(height: 20),
-              Text(
-                'Choisis un mot pour t\'entraîner !',
-                textAlign: TextAlign.center,
-                style: theme.textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: AppTheme.woodBrown,
+
+              // Affichage du monstre de volume uniquement lors de l'enregistrement
+              if (isRecording)
+                Container(
+                  height: 200,
+                  alignment: Alignment.center,
+                  child: VolumeMonsterWidget(state: volumeState),
+                )
+              else
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Text(
+                    'Choisis un mot pour t\'entraîner !',
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: AppTheme.woodBrown,
+                    ),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 20),
 
               Expanded(
                 child: ListView.builder(
@@ -111,7 +165,6 @@ class SoundDetailView extends StatelessWidget {
                         ),
                         trailing: ElevatedButton(
                           onPressed: isRecording ? null : () async {
-                            // Appel de l'enregistrement via le UseCase
                             final recordUseCase = sl<RecordProductionUseCase>();
                             await recordUseCase(
                               onStart: () => onRecordingChanged(true),
@@ -128,26 +181,11 @@ class SoundDetailView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        onTap: () {
-                          // TODO: Jouer le son modèle (âne, avion...)
-                        },
                       ),
                     );
                   },
                 ),
               ),
-
-              if (isRecording)
-                Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Text(
-                    'Je t\'écoute...',
-                    style: theme.textTheme.titleMedium?.copyWith(
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
             ],
           );
         }
