@@ -1,5 +1,5 @@
-name: dysvoix
-description: "Application DysVoix - Aide à l'élocution pour enfants."
+name: orthophonie_emie
+description: "Application thérapeutique Flutter Android d'aide à l'élocution pour enfants atteints de dyspraxie verbale"
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -10,17 +10,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  flutter_bloc: ^8.1.6
-  get_it: ^7.7.0
-  equatable: ^2.0.7
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  record: ^6.2.0
-  just_audio: ^0.10.5
-  path_provider: ^2.1.5
-  permission_handler: ^12.0.1
-  flutter_secure_storage: ^10.0.0
+  cupertino_icons: 1.0.8
+  flutter_bloc: 8.1.6
+  get_it: 7.7.0
+  equatable: 2.0.7
+  hive: 2.2.3
+  hive_flutter: 1.1.0
+  record: 6.2.0
+  just_audio: 0.10.5
+  path_provider: 2.1.5
+  permission_handler: 12.0.1
+  flutter_secure_storage: 10.0.0
 
 dev_dependencies:
   flutter_test:

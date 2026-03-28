@@ -134,7 +134,7 @@ class _SoundBubble extends StatelessWidget {
           border: Border.all(color: AppTheme.woodBrown, width: 3),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               offset: const Offset(2, 4),
               blurRadius: 5,
             ),

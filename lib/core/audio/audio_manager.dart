@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:just_audio/just_audio.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
@@ -82,7 +81,6 @@ class AudioManager {
       await _player.play();
     } catch (e) {
       // Gérer l'erreur de lecture
-      print('Erreur lecture audio: $e');
     }
   }
 

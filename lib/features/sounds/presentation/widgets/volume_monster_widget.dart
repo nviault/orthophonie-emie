@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../domain/entities/volume_state.dart';
+import '../../../audio/domain/entities/volume_state.dart';
 
 /// Widget interactif représentant un "monstre" qui réagit au volume.
 /// UX enfant : sans texte, juste visuel.
@@ -45,7 +45,7 @@ class VolumeMonsterWidget extends StatelessWidget {
         border: Border.all(color: AppTheme.woodBrown, width: 4),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.4),
+            color: color.withValues(alpha: 0.4),
             blurRadius: 15,
             spreadRadius: 5,
           ),

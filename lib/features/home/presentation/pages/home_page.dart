@@ -55,11 +55,11 @@ class HomeView extends StatelessWidget {
         },
         child: Container(
           width: double.infinity,
-          color: theme.colorScheme.background,
+          color: theme.colorScheme.surface,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.emoji_nature,
                 size: 100,
                 color: AppTheme.leafGreen,
