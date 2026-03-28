@@ -31,6 +31,6 @@ void main() {
     await tester.pumpAndSettle();
 
     // Vérification qu'on est arrivé sur le menu
-    expect(find.text('Que souhaites-tu faire ?'), findsOneWidget);
+    expect(find.text('Quel son veux-tu apprendre ?'), findsOneWidget);
   });
 }
