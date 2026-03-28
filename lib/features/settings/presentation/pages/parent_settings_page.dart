@@ -60,7 +60,7 @@ class ParentSettingsView extends StatelessWidget {
                   title: const Text('Activer la caméra'),
                   subtitle: const Text('Permet à l\'enfant de voir sa bouche'),
                   value: state.cameraEnabled,
-                  activeColor: AppTheme.leafGreen,
+                  activeThumbColor: AppTheme.leafGreen,
                   onChanged: (value) {
                     context.read<SettingsBloc>().add(ToggleCamera(value));
                   },

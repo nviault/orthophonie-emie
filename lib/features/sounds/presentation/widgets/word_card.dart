@@ -34,7 +34,7 @@ class WordCard extends StatelessWidget {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: controller.isPlaying
-                        ? AppTheme.leafGreen.withOpacity(0.3)
+                        ? AppTheme.leafGreen.withValues(alpha: 0.3)
                         : AppTheme.sandBeige,
                     borderRadius: BorderRadius.circular(25),
                     border: Border.all(
@@ -44,7 +44,7 @@ class WordCard extends StatelessWidget {
                     boxShadow: [
                       if (controller.isPlaying)
                         BoxShadow(
-                          color: AppTheme.leafGreen.withOpacity(0.4),
+                          color: AppTheme.leafGreen.withValues(alpha: 0.4),
                           blurRadius: 10,
                           spreadRadius: 2,
                         ),
@@ -78,7 +78,7 @@ class WordCard extends StatelessWidget {
               Icon(
                 controller.isPlaying ? Icons.volume_up : Icons.play_circle_fill,
                 size: 32,
-                color: controller.isPlaying ? AppTheme.buttonOrange : AppTheme.buttonOrange.withOpacity(0.7),
+                color: controller.isPlaying ? AppTheme.buttonOrange : AppTheme.buttonOrange.withValues(alpha: 0.7),
               ),
             ],
           ),

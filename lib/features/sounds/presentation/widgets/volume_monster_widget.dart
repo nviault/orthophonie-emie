@@ -45,7 +45,7 @@ class VolumeMonsterWidget extends StatelessWidget {
         border: Border.all(color: AppTheme.woodBrown, width: 4),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.4),
+            color: color.withValues(alpha: 0.4),
             blurRadius: 15,
             spreadRadius: 5,
           ),

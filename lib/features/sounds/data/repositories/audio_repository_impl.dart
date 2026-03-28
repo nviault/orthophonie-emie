@@ -14,7 +14,7 @@ class AudioRepositoryImpl implements AudioRepository {
       await _player.setAsset(path);
       await _player.play();
     } catch (e) {
-      print('Erreur lors de la lecture audio: $e');
+      // Ignorer l'erreur ou utiliser un logger
     }
   }
 

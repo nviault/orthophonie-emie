@@ -21,7 +21,6 @@ class AppTheme {
         primary: leafGreen,
         secondary: bubblePink,
         surface: sandBeige,
-        background: softWhite,
       ),
       // Utilisation d'une police système ronde par défaut pour éviter le réseau (google_fonts)
       // En production, on inclurait le fichier .ttf dans assets/fonts/
@@ -59,7 +58,7 @@ class AppTheme {
       ),
 
       // Style des cartes
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: sandBeige,
         elevation: 2,
         shape: RoundedRectangleBorder(
